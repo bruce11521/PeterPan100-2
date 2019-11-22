@@ -62,7 +62,6 @@ struct ContentView: View {
                     imageNameAry.append("\(strName)\(item)")
                 }
             }
-            
             if !imageNameAry.isEmpty{
                 return "\(imageNameAry[imageNum])"
             }else{
@@ -81,6 +80,9 @@ struct ContentView: View {
                 TextField("來個星座吧！", text: $inputTextField )
                     .overlay(RoundedRectangle(cornerRadius: 6).stroke(lineWidth: 3))
                     .foregroundColor(Color.white)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                    
+                
             }
             HStack{
                 Text("想按就按：").modifier(LargeLabelStyle())
